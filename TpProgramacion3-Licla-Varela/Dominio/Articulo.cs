@@ -19,7 +19,7 @@ namespace Dominio
         public string DESCRIPCION { get; set; }
 
         [DisplayNameAttribute("Precio")]
-        public decimal precio { get; set; }
+        public float precio { get; set; }
  
         
         [DisplayNameAttribute("TIPO")]

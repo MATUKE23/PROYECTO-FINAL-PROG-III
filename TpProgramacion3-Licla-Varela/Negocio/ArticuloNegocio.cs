@@ -31,12 +31,10 @@ namespace Negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.id = (int)lector["id"];
-                    aux.codigo = (string)lector["Codigo"];
-                    aux.descripcion = (string)lector["dart"];
-                    aux.nombre = (string)lector["Nombre"];
-
-                    aux.precio = (decimal)lector["precio"];
+                    aux.ID = (int)lector["id"];
+                    aux.CODIGO = (string)lector["Codigo"];
+                    aux.DESCRIPCION = (string)lector["dart"];
+                    aux.precio = (float)lector["precio"];
 
                    lista.Add(aux);
 
