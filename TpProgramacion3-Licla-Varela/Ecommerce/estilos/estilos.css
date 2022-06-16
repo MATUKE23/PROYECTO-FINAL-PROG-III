@@ -1,11 +1,26 @@
-﻿body {
-}
-@
-.parrafo
-{
-    color: red
+﻿:root {
 }
 
-.navbar1 {
-    background-color: #2D18AC
+.parrafo
+{
+    color: red;
+}
+
+.navbar {
+    background-color: #2D18AC;
+    color: #FFFFFF;
+}
+
+
+
+a:link,a:visited {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #D3D1DE;
+}
+
+a:active {
+    color: #C0BFC9;
 }

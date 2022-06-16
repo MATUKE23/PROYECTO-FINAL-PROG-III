@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace Negocio
 {
     public class Class1
-    {
+    { //esto es una prueba dsdd
     }
 }
