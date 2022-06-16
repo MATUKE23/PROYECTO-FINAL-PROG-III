@@ -22,7 +22,7 @@ namespace Negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=ECOMMERCE; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT a.Id as id, A.CODIGO,  a.Descripcion dart,  A.PRECIO, A.TIPO, a.OBS, A.ESTADO, a.ID_CATEGORIA IdCategoria from ARTICULOS a";
+                comando.CommandText = "SELECT a.ID as ID, A.CODIGO,  a.Descripcion DART,  A.PRECIO, A.TIPO, a.OBS, A.ESTADO, a.ID_CATEGORIA IDCATEGORIA from ARTICULOS a";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -31,12 +31,17 @@ namespace Negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.ID = (int)lector["id"];
-                    aux.CODIGO = (string)lector["Codigo"];
-                    aux.DESCRIPCION = (string)lector["dart"];
-                    aux.precio = (float)lector["precio"];
+                    aux.ID = (int)lector["ID"];
+                    aux.CODIGO = (string)lector["CODIGO"];
+                    aux.DESCRIPCION = (string)lector["DART"];
+                    //aux.PRECIO = (decimal)lector["PRECIO"];
+                    aux.TIPO = (string)lector["TIPO"];
+                    aux.TIPO = (string)lector["OBS"];
+                    //aux.TIPO = (bool)lector["ESTADO"];
+                   // aux.ID_CATEGORIA = (int)lector["IDCATEGORIA"];
 
-                   lista.Add(aux);
+
+                    lista.Add(aux);
 
                 }
 
