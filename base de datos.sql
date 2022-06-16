@@ -22,3 +22,16 @@ OBS VARCHAR(200),
 ESTADO BIT NOT NULL,
 ID_CATEGORIA INT FOREIGN KEY REFERENCES CATEGORIAS(ID) 
 )
+
+use ECOMMERCE
+--Insert de Categorias
+insert into CATEGORIAS(CODIGO,DESCRIPCION,OBS,ESTADO) values('1','Biombo','Madera','1')
+insert into CATEGORIAS(CODIGO,DESCRIPCION,OBS,ESTADO) values('2','Sillas','Madera','1')
+
+select * from CATEGORIAS
+
+--Insert de Articulos
+insert into ARTICULOS (CODIGO, DESCRIPCION, PRECIO,TIPO, OBS, ESTADO, ID_CATEGORIA) values('1','Biombo Soshi','2300','ART','OK','1','1')
+insert into ARTICULOS (CODIGO, DESCRIPCION, PRECIO,TIPO, OBS, ESTADO, ID_CATEGORIA) values('2','Silla Bebe1','1200','ART','OK','1','2')
+insert into ARTICULOS (CODIGO, DESCRIPCION, PRECIO,TIPO, OBS, ESTADO, ID_CATEGORIA) values('3','Biombo Standard','1500','ART','OK','1','2')
+select * from ARTICULOS
