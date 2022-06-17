@@ -37,6 +37,10 @@
                         <li class="nav-item active mx-5">
                             <a class="nav-link" href="#">Quienes somos</a>
                         </li>
+
+                        <li class="nav-item active mx-5">
+                            <a class="nav-link" href="TestConexionBase">Test Conexion a Base</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
