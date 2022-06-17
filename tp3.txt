@@ -1,5 +1,5 @@
 Ecommerce: 
-
+enlace draw.io: https://app.diagrams.net/#HMATUKE23%2FPROYECTO-FINAL-PROG-III%2Fmain%2FUntitled%20Diagram.drawio
 Clases:
 
 -Artículos(id, Código, Descripción, Dimensiones, precio, tipo)
