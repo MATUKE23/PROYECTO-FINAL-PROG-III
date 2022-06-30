@@ -28,3 +28,7 @@ Cliente:
 -modificar precios
 -gestionar clientes
 -
+
+-Solicitud(Nro de comprobante, cliente, fecha de alta, DetalleSolicitud[x], estado)
+-DetalleSolicitud(articulo, cantidadVendida,)
+-Mensaje(mensaje, fecha, hora, destinatario, remitente).
