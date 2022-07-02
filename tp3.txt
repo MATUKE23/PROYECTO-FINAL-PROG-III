@@ -2,14 +2,18 @@ Ecommerce:
 
 Clases:
 
--Artículos(id, Código, Descripción, Dimensiones, precio, tipo)
+-Artículos(id, Código, Descripción,  precio, tipo,obs, Estado, Imagen, categoria)
 
-Usuarios(id, Usuario, contraseña, nombre completo,  rol)
+-Categoria (id, codigo, descripcion, obs)
+
+Usuarios(id, Usuario, contraseña, nombre completo, rol)
 -Cliente --------> Usuario + (DNI, email,contacto, dirección, numero, localidad, provincia, país, C.P.) ventanas de compras
 -Vendedor -----> usuario () ventanas de cobro, envío de comprobantes y/o mercadería, permite carga stock y CRUD de artículos
 
 -PedidoVenta(Nro de comprobante, cliente, vendedor, fecha de venta, total, Forma de pago, envio, subtotal, DetallePedido[x],estado)
--DetallePedido(artículo, cantidadVendida, monto);
+-DetallePedido(artículo, cantidadVendida, precio, monto);
+
+-Domicilio(Calle, numero, )
 
 Cliente:
 -Login y registro
@@ -27,4 +31,5 @@ Cliente:
 -cargar nuevos productos
 -modificar precios
 -gestionar clientes
--
+-alerta y notificaciones de venta.
+
