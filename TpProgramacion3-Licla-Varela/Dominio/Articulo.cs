@@ -20,26 +20,21 @@ namespace Dominio
 
         [DisplayNameAttribute("Precio")]
         public decimal PRECIO { get; set; }
- 
-        
-        [DisplayNameAttribute("TIPO")]
 
+        [DisplayNameAttribute("TIPO")]
         public string TIPO { get; set; }
 
+        [DisplayNameAttribute("URL_IMAGEN")]
+        public string URLIMAGEN { get; set; }
 
         [DisplayNameAttribute("OBSERVACION")]
-
         public string OBS { get; set; }
 
-
         [DisplayNameAttribute("ESTADO")]
-
         public bool ESTADO { get; set; }
 
         [DisplayNameAttribute("ID_CATEGORIA")]
-
         public int ID_CATEGORIA { get; set; }
-
        
     }
 }
