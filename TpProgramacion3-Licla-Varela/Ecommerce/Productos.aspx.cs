@@ -22,8 +22,6 @@ namespace Ecommerce
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             listaImagen = imagenNegocio.listar();
 
-
-
             foreach (Articulo auxArticulo in ListaArticulos)
             {
                 auxArticulo.URLIMAGEN = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png";
@@ -39,6 +37,8 @@ namespace Ecommerce
                     }
                 }
             }
+            Session.Add("ListaArticulos", ListaArticulos);
+            
         }
     }
 }
