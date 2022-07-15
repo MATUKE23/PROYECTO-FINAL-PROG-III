@@ -11,7 +11,7 @@ namespace Ecommerce
 {
 
 
-    public partial class Quienes_somos
+    public partial class Modificar_Quienes_Somos
     {
 
         /// <summary>
@@ -24,21 +24,21 @@ namespace Ecommerce
         protected global::System.Web.UI.WebControls.Label LabelQuienesSomos;
 
         /// <summary>
-        /// LabelMision control.
+        /// LabelModificarMision control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMision;
+        protected global::System.Web.UI.WebControls.Label LabelModificarMision;
 
         /// <summary>
-        /// LabelVision control.
+        /// LabelModificarVision control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelVision;
+        protected global::System.Web.UI.WebControls.Label LabelModificarVision;
     }
 }

@@ -11,34 +11,34 @@ namespace Ecommerce
 {
 
 
-    public partial class Quienes_somos
+    public partial class Log_In
     {
 
         /// <summary>
-        /// LabelQuienesSomos control.
+        /// TextBoxLogInEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelQuienesSomos;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLogInEmail;
 
         /// <summary>
-        /// LabelMision control.
+        /// TextBoxLogInPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMision;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLogInPassword;
 
         /// <summary>
-        /// LabelVision control.
+        /// ButtonIniciarSesion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelVision;
+        protected global::System.Web.UI.WebControls.Button ButtonIniciarSesion;
     }
 }

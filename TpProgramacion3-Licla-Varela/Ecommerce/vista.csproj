@@ -126,6 +126,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Log In.aspx" />
+    <Content Include="Main Admin.aspx" />
+    <Content Include="Modificar Logo.aspx" />
+    <Content Include="Modificar Ofertas.aspx" />
+    <Content Include="Modificar Productos.aspx" />
+    <Content Include="Modificar Quienes Somos.aspx" />
     <Content Include="Ofertas.aspx" />
     <Content Include="Producto.aspx" />
     <Content Include="Productos.aspx" />
@@ -192,6 +198,48 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Log In.aspx.cs">
+      <DependentUpon>Log In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log In.aspx.designer.cs">
+      <DependentUpon>Log In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main Admin.aspx.cs">
+      <DependentUpon>Main Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main Admin.aspx.designer.cs">
+      <DependentUpon>Main Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Logo.aspx.cs">
+      <DependentUpon>Modificar Logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Logo.aspx.designer.cs">
+      <DependentUpon>Modificar Logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Ofertas.aspx.cs">
+      <DependentUpon>Modificar Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Ofertas.aspx.designer.cs">
+      <DependentUpon>Modificar Ofertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Productos.aspx.cs">
+      <DependentUpon>Modificar Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Productos.aspx.designer.cs">
+      <DependentUpon>Modificar Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Quienes Somos.aspx.cs">
+      <DependentUpon>Modificar Quienes Somos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Quienes Somos.aspx.designer.cs">
+      <DependentUpon>Modificar Quienes Somos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ofertas.aspx.cs">
       <DependentUpon>Ofertas.aspx</DependentUpon>

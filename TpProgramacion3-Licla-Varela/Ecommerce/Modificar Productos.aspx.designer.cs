@@ -11,34 +11,25 @@ namespace Ecommerce
 {
 
 
-    public partial class Quienes_somos
+    public partial class Modificar_Productos
     {
 
         /// <summary>
-        /// LabelQuienesSomos control.
+        /// ButtonModificarImagen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelQuienesSomos;
+        protected global::System.Web.UI.WebControls.Button ButtonModificarImagen;
 
         /// <summary>
-        /// LabelMision control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMision;
-
-        /// <summary>
-        /// LabelVision control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelVision;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

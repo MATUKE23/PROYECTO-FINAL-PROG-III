@@ -35,7 +35,9 @@
 
     <h2>Telefono de contacto2: <asp:TextBox ID="TextBoxTelContacto2" runat="server"></asp:TextBox></h2>
 
-    <h2>Fecha de Nacimiento:<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>    </h2>
+    <h2>Fecha de Nacimiento:<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>  </h2>
 
+
+    <asp:Button ID="ButtonGuardar" runat="server" Text="Guardar" />
 
 </asp:Content>
