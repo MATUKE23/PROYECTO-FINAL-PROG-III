@@ -9,8 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-                <asp:GridView runat="server" ID="dgvArticulos"></asp:GridView>
+                <asp:GridView runat="server" ID="dgvArticulos" CssClass="Table" AutoGenerateColumns="true"></asp:GridView>
+       
+        
         </div>
+        
     </form>
 </body>
 </html>
