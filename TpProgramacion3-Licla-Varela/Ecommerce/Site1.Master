@@ -39,6 +39,9 @@
                         <li class="nav-item active mx-5">
                             <a class="nav-link" href="Quienes somos.aspx">Quienes somos</a>
                         </li>
+                         <li class="nav-item active mx-5">
+                            <a class="nav-link" href="Main Admin.aspx">Main Admin</a>
+                        </li>
                         <li class="nav-item active mx-5">
                             <a class="nav-link" href="TestConexionBase">Test Conexion a Base</a>
                         </li>

@@ -105,6 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrar Pedidos.aspx" />
+    <Content Include="Administrar Usuarios y Contraseñas.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -128,6 +130,8 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Log In.aspx" />
     <Content Include="Main Admin.aspx" />
+    <Content Include="Modificar Footer.aspx" />
+    <Content Include="Modificar Header.aspx" />
     <Content Include="Modificar Logo.aspx" />
     <Content Include="Modificar Ofertas.aspx" />
     <Content Include="Modificar Productos.aspx" />
@@ -173,6 +177,20 @@
     <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrar Pedidos.aspx.cs">
+      <DependentUpon>Administrar Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar Pedidos.aspx.designer.cs">
+      <DependentUpon>Administrar Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar Usuarios y Contraseñas.aspx.cs">
+      <DependentUpon>Administrar Usuarios y Contraseñas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar Usuarios y Contraseñas.aspx.designer.cs">
+      <DependentUpon>Administrar Usuarios y Contraseñas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Carrito.aspx.cs">
@@ -212,6 +230,20 @@
     </Compile>
     <Compile Include="Main Admin.aspx.designer.cs">
       <DependentUpon>Main Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Footer.aspx.cs">
+      <DependentUpon>Modificar Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Footer.aspx.designer.cs">
+      <DependentUpon>Modificar Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Header.aspx.cs">
+      <DependentUpon>Modificar Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Header.aspx.designer.cs">
+      <DependentUpon>Modificar Header.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modificar Logo.aspx.cs">
       <DependentUpon>Modificar Logo.aspx</DependentUpon>
