@@ -11,11 +11,23 @@ namespace Ecommerce
 {
     public partial class caja : System.Web.UI.Page
     {
+        public List<Articulo> carrito { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio artNegocio = new ArticuloNegocio();
-            DgvCaja.DataSource = artNegocio.listar();
+            carrito = (List<Articulo>)Session["carritoCompra"];
+            DgvCaja.DataSource = carrito;
             DgvCaja.DataBind();
+        }
+
+        protected void Agregar1(object sender, EventArgs e)
+        {
+            int indice = DgvCaja.SelectedRow.RowIndex;
+            
+            if(carrito[indice].CANTIDAD >= 1)
+            {
+                carrito[indice].CANTIDAD++;
+            }
+
         }
     }
 }
