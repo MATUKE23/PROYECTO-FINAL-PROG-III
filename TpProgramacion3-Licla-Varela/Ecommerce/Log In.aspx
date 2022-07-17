@@ -1,10 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Log In.aspx.cs" Inherits="Ecommerce.Log_In" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Ingrese su E-Mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBoxLogInEmail" runat="server"></asp:TextBox></h2>
-
-    <h2>Ingrese su contraseña <asp:TextBox ID="TextBoxLogInPassword" runat="server"></asp:TextBox> </h2>
-    <asp:Button ID="ButtonIniciarSesion" runat="server" Text="Iniciar Sesion" />
-
+    <div class="container">
+        <div class=" row justify-content-center">
+            <div class="card">
+                <div class="card-Header text-center">
+                    <h3>Login</h3>
+                </div>
+                <div class="card-body">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <asp:TextBox ID="TextBoxLogInEmail2" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <asp:TextBox ID="TextBoxLogInPassword2" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div> 
+                    <div class="form-group row justify-content-center">
+                        <asp:Button ID="btnIniciarSesion" CssClass="btn btn-primary" runat="server" Text="Iniciar Sesión" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
