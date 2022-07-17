@@ -11,34 +11,34 @@ namespace Ecommerce
 {
 
 
-    public partial class Producto
+    public partial class Administrar_Usuarios_y_Contraseñas
     {
 
         /// <summary>
-        /// txtCantidad control.
+        /// TextBoxBuscarUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxBuscarUsuario;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// TextBoxModificarUsuario control.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxModificarUsuario;
 
         /// <summary>
-        /// Control btnPagar.
+        /// TextBoxModificarContraseña control.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPagar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxModificarContraseña;
     }
 }

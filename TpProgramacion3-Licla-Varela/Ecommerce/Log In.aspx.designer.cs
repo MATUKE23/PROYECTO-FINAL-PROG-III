@@ -11,34 +11,34 @@ namespace Ecommerce
 {
 
 
-    public partial class Producto
+    public partial class Log_In
     {
 
         /// <summary>
-        /// txtCantidad control.
+        /// TextBoxLogInEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLogInEmail;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// TextBoxLogInPassword control.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLogInPassword;
 
         /// <summary>
-        /// Control btnPagar.
+        /// ButtonIniciarSesion control.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPagar;
+        protected global::System.Web.UI.WebControls.Button ButtonIniciarSesion;
     }
 }

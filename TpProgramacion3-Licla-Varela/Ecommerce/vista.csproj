@@ -105,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrar Pedidos.aspx" />
+    <Content Include="Administrar Usuarios y Contraseñas.aspx" />
+    <Content Include="Carrito.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -113,6 +116,7 @@
     <Content Include="Default.aspx" />
     <Content Include="estilos\estilos.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Favoritos.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -124,8 +128,18 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Log In.aspx" />
+    <Content Include="Main Admin.aspx" />
+    <Content Include="Modificar Footer.aspx" />
+    <Content Include="Modificar Header.aspx" />
+    <Content Include="Modificar Logo.aspx" />
+    <Content Include="Modificar Ofertas.aspx" />
+    <Content Include="Modificar Productos.aspx" />
+    <Content Include="Modificar Quienes Somos.aspx" />
+    <Content Include="Ofertas.aspx" />
     <Content Include="Producto.aspx" />
     <Content Include="Productos.aspx" />
+    <Content Include="Quienes somos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -154,6 +168,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Sign in Basic.aspx" />
+    <Content Include="Sign in Completo.aspx" />
     <Content Include="TestConexionBase.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -161,8 +177,29 @@
     <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrar Pedidos.aspx.cs">
+      <DependentUpon>Administrar Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar Pedidos.aspx.designer.cs">
+      <DependentUpon>Administrar Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar Usuarios y Contraseñas.aspx.cs">
+      <DependentUpon>Administrar Usuarios y Contraseñas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar Usuarios y Contraseñas.aspx.designer.cs">
+      <DependentUpon>Administrar Usuarios y Contraseñas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,8 +207,78 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Favoritos.aspx.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Favoritos.aspx.designer.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Log In.aspx.cs">
+      <DependentUpon>Log In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log In.aspx.designer.cs">
+      <DependentUpon>Log In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main Admin.aspx.cs">
+      <DependentUpon>Main Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main Admin.aspx.designer.cs">
+      <DependentUpon>Main Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Footer.aspx.cs">
+      <DependentUpon>Modificar Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Footer.aspx.designer.cs">
+      <DependentUpon>Modificar Footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Header.aspx.cs">
+      <DependentUpon>Modificar Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Header.aspx.designer.cs">
+      <DependentUpon>Modificar Header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Logo.aspx.cs">
+      <DependentUpon>Modificar Logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Logo.aspx.designer.cs">
+      <DependentUpon>Modificar Logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Ofertas.aspx.cs">
+      <DependentUpon>Modificar Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Ofertas.aspx.designer.cs">
+      <DependentUpon>Modificar Ofertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Productos.aspx.cs">
+      <DependentUpon>Modificar Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Productos.aspx.designer.cs">
+      <DependentUpon>Modificar Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar Quienes Somos.aspx.cs">
+      <DependentUpon>Modificar Quienes Somos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar Quienes Somos.aspx.designer.cs">
+      <DependentUpon>Modificar Quienes Somos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ofertas.aspx.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ofertas.aspx.designer.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Producto.aspx.cs">
       <DependentUpon>Producto.aspx</DependentUpon>
@@ -188,6 +295,27 @@
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quienes somos.aspx.cs">
+      <DependentUpon>Quienes somos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quienes somos.aspx.designer.cs">
+      <DependentUpon>Quienes somos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign in Basic.aspx.cs">
+      <DependentUpon>Sign in Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign in Basic.aspx.designer.cs">
+      <DependentUpon>Sign in Basic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign in Completo.aspx.cs">
+      <DependentUpon>Sign in Completo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign in Completo.aspx.designer.cs">
+      <DependentUpon>Sign in Completo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
