@@ -14,6 +14,7 @@ namespace Ecommerce
         public List<Articulo> ListaArticulos { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
             ArticuloNegocio aux = new ArticuloNegocio();
             ListaArticulos = aux.listar();

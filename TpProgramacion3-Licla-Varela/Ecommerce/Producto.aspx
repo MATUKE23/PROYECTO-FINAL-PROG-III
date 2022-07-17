@@ -16,10 +16,11 @@
                 <p class="cantidad">
                     Cantidad:
                 <p class="cantidad">
+                    
                     <asp:TextBox ID="txtCantidad" runat="server" Width="55px" type="number" min="1" max="99" Text="1"></asp:TextBox>
                 </p>
-                <br />
-                <br />
+                <asp:Button ID="btnAgregar" runat="server" CssClass="btn btn-primary" Text="Agregar al carrito" OnClick="btnAgregar_Click" />
+                <asp:Button ID="btnPagar" runat="server" CssClass="btn btn-secondary"  Text="Ir a pagar" />
             </div>
         </div>
 

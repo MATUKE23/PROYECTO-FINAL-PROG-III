@@ -24,5 +24,15 @@ namespace Ecommerce
                 }
             }
         }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            List <Articulo> carrito = (List<Articulo>)Session["carritoCompra"];
+            Articulo aux = new Articulo();
+            aux = articulo;
+            aux.CANTIDAD =  int.Parse(txtCantidad.Text);
+            carrito.Add(aux);
+            Session.Add("carritoCompra", carrito);
+        }
     }
 }
