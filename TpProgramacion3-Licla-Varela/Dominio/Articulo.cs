@@ -14,7 +14,7 @@ namespace Dominio
 
         [DisplayName("Código")]
         public string CODIGO { get; set; }
-            
+
         [DisplayNameAttribute("Descripción")]
         public string DESCRIPCION { get; set; }
 
@@ -35,6 +35,9 @@ namespace Dominio
 
         [DisplayNameAttribute("ID_CATEGORIA")]
         public int ID_CATEGORIA { get; set; }
-       
+
+        [DisplayNameAttribute("CANTIDAD")]
+        public int CANTIDAD { get; set; }
+
     }
 }
