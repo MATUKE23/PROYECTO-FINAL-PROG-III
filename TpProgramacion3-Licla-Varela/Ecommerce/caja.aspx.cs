@@ -15,7 +15,6 @@ namespace Ecommerce
         protected void Page_Load(object sender, EventArgs e)
         {
             carrito = (List<Articulo>)Session["carritoCompra"];
-         //   quitarArticulo();
             EjecutarAccion();
         }
 
@@ -54,17 +53,11 @@ namespace Ecommerce
             }
         }
 
-        private void quitarArticulo()
+        protected void VaciarCarrito(object sender, EventArgs e)
         {
-            int cont;
-
-            if (Request.QueryString["contador"] != null)
-            {
-                cont = int.Parse(Request.QueryString["contador"].ToString());
-                carrito.RemoveAt(cont);
-                Session.Add("carritoCompra", carrito);
-                Response.Redirect("Caja.aspx");
-            }
+            carrito.Clear();
+            Session.Add("carritoCompra", carrito);
+            Response.Redirect("Caja.aspx");
         }
     }
 }
