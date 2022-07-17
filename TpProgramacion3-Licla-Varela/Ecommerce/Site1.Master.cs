@@ -25,6 +25,7 @@ namespace Ecommerce
 
             ArticuloNegocio aux = new ArticuloNegocio();
             ListaArticulos = aux.listar();
+           
         }
     }
 }
