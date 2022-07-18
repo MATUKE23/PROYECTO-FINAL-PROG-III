@@ -19,7 +19,7 @@
         <div>
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand " href="Default.aspx">El sueño de Amelie</a>
-                <a class="navbar-brand" href="Carrito.aspx" title="Ir a Carrito">
+                <a class="navbar-brand" href="caja.aspx" title="Ir a Carrito">
                     <i class="fa-solid fa-cart-shopping"></i> <%=carrito.Sum(x => x.CANTIDAD) %>
                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="Main Admin.aspx">Main Admin</a>
                         </li>
                         <li class="nav-item active mx-5">
-                            <a class="nav-link" href="caja.aspx">Caja</a>
+                            <a class="nav-link" href="log in.aspx">login</a>
                         </li>
                     </ul>
                 </div>
