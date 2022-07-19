@@ -117,6 +117,24 @@ Primary Key (IdProvicia)
 
 
 
+create Table Pedidos(
+NroComprobante bigint Primary key identity(1,1),
+Estado varchar(15) not null check( Estado='SOLICITADO' OR Estado='ACEPTADO' OR Estado='CANCELADO' OR Estado='DEVUELTO' OR Estado='ENVIADO' OR Estado='ENTREGADO'),
+Cliente int foreign key references usuarios (DNI),
+FechaAlta date not null,
+FechaModificacion date not null, --ultimo cambio de estado
+FormaDePago varchar(15) not null check(FormaDePago = 'EFECTIVO' OR FormaDePago='TRANSFERENCIA' OR FormaDePago= 'TARJETA'),
+Total float not null
+)
+
+create table DetallePedido(
+Id bigint primary key identity(1,1),
+NroComprobante bigint foreign key references Pedidos(NroComprobante),
+IdArticulo int foreign key references Articulos(ID),
+Cantidad int not null check (Cantidad>0),
+Monto float not null
+)
+
 
 
 
