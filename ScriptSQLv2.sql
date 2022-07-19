@@ -61,6 +61,62 @@ SELECT a.Id as id, A.CODIGO,  a.Descripcion dart,  A.PRECIO, A.TIPO, a.OBS, A.ES
 
 
 
+USE ECOMMERCE
+
+ALTER TABLE USUARIOS
+ADD TIPO INT CHECK (TIPO >=0 AND TIPO <=9)
+
+
+SELECT * FROM USUARIOS
+
+--AGREGAR COLUMNA USER 
+
+ALTER TABLE USUARIOS
+ADD USUARIO NVARCHAR(15) NOT NULL 
+
+ALTER TABLE USUARIOS
+ADD PASS NVARCHAR(15) NOT NULL 
+
+use ECOMMERCE
+
+Create Table Usuarios (
+Nombres nVarchar(max) not null,
+Apellidos nVarchar(max) not null,
+DNI int primary key ,
+Telefono1 nvarchar(22) not null,
+Telefono2 nvarchar(22) null,
+FechaNacimiento date not null,
+Estado bit
+)
+
+Create Table Domicilios(
+DNI int foreign key references usuarios (DNI),
+Calle nvarchar(max) not null,
+NumeroDeCalle int not null,
+EntreCalles nvarchar(max) null,
+Edificio nvarchar(max) null,
+Departamento nvarchar(max) null,
+CodigoPostal Nvarchar(10) not null unique,
+InfoAdicional text null
+Primary Key (DNI, CodigoPostal)
+)
+
+Create Table Localidades (
+CodigoPostal Nvarchar(10) foreign key references Domicilios (CodigoPostal),
+IdProvincia int not null,
+NombreLocalidad nvarchar(max) not null,
+Primary Key (CodigoPostal,IdProvincia)
+)
+
+
+Create Table Provincias(
+IdProvicia int foreign key references Localidades (IdProvincia),
+NombreProvincia nvarchar(max) not null,
+Primary Key (IdProvicia)
+)
+
+
+
 
 
 
