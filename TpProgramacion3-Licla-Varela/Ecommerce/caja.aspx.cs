@@ -27,10 +27,10 @@ namespace Ecommerce
                 cont = int.Parse(Request.QueryString["contador"].ToString());
                 accion = Request.QueryString["accion"].ToString();
 
-                switch(accion)
+                switch (accion)
                 {
                     case "agregar":
-                            carrito[cont].CANTIDAD++;
+                        carrito[cont].CANTIDAD++;
                         break;
 
                     case "quitar":
@@ -59,5 +59,6 @@ namespace Ecommerce
             Session.Add("carritoCompra", carrito);
             Response.Redirect("Caja.aspx");
         }
+
     }
 }
