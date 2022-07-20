@@ -13,10 +13,10 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Usuario"] != null)
+            if (Session["Usuario"] != null) //verifica que este logueado para acceder y evita saltear el control editando el URL
             {
                 Session.Add("Error", "Primero debes loguearte antes de ingresar");
-                Response.Redirect("Error.aspx", false);
+                Response.Redirect("Error0.aspx", false);
 
             }
         }
@@ -33,7 +33,7 @@ namespace Ecommerce
                 {//redirigo a la pantalla de logueo 
                     // ACA SE LOGUEA EL USER
                     Session.Add("USUARIO", usuario);//agrego al usuario al sesion
-                    Response.Redirect("Default.aspx", false); // SI ES TRUE VA AL ALA PAGINA DEL MENU
+                    Response.Redirect("defaultAdmin.aspx", false); // SI ES TRUE VA AL ALA PAGINA DEL MENU
                 }
                 else
                 {//sino error y redirigo a pagina de error.
