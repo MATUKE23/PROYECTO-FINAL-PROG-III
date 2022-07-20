@@ -13,7 +13,7 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Session["usuario"] != null && ((dominio.Usuario)Session["usuario"]).TipoUsuario == dominio.TipoUsuario.ADMIN))
+            if (!(Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin))
             {
                 Session.Add("error", "No tienes permisos para ingresar a esta pantalla. Necesitas nivel admin.");
                 Response.Redirect("Error0.aspx", false);
