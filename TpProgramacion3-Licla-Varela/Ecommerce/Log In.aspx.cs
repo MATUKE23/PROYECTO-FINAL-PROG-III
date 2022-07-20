@@ -38,14 +38,14 @@ namespace Ecommerce
                 else
                 {//sino error y redirigo a pagina de error.
                     Session.Add("error", "Usted a ingresado un Usuario o Password incorrecto");//SI ES INCORRECTO 
-                    Response.Redirect("Error.aspx", false);
+                    Response.Redirect("Error0.aspx", false);
                 }
 
             }
             catch (Exception ex)
             {
                 Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Response.Redirect("Error0.aspx");
             }
         }
     }
