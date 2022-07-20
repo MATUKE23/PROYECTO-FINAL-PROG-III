@@ -27,7 +27,7 @@
 
     <h2>Nombre/s: <asp:TextBox ID="TextBoxNombres" runat="server"></asp:TextBox></h2>
        
-    <h2> Apellido/s: <asp:TextBox ID="TextBoxApellidos" runat="server"></asp:TextBox></h2>
+    <h2>Apellido/s: <asp:TextBox ID="TextBoxApellidos" runat="server"></asp:TextBox></h2>
 
     <h2>DNI: <asp:TextBox ID="TextBoxDNI" runat="server"></asp:TextBox></h2>
 
