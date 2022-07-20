@@ -61,6 +61,80 @@ SELECT a.Id as id, A.CODIGO,  a.Descripcion dart,  A.PRECIO, A.TIPO, a.OBS, A.ES
 
 
 
+USE ECOMMERCE
+
+ALTER TABLE USUARIOS
+ADD TIPO INT CHECK (TIPO >=0 AND TIPO <=9)
+
+
+SELECT * FROM USUARIOS
+
+--AGREGAR COLUMNA USER 
+
+ALTER TABLE USUARIOS
+ADD USUARIO NVARCHAR(15) NOT NULL 
+
+ALTER TABLE USUARIOS
+ADD PASS NVARCHAR(15) NOT NULL 
+
+use ECOMMERCE
+
+Create Table Usuarios (
+Nombres nVarchar(max) not null,
+Apellidos nVarchar(max) not null,
+DNI int primary key ,
+Telefono1 nvarchar(22) not null,
+Telefono2 nvarchar(22) null,
+FechaNacimiento date not null,
+Estado bit
+)
+
+Create Table Domicilios(
+DNI int foreign key references usuarios (DNI),
+Calle nvarchar(max) not null,
+NumeroDeCalle int not null,
+EntreCalles nvarchar(max) null,
+Edificio nvarchar(max) null,
+Departamento nvarchar(max) null,
+CodigoPostal Nvarchar(10) not null unique,
+InfoAdicional text null
+Primary Key (DNI, CodigoPostal)
+)
+
+Create Table Localidades (
+CodigoPostal Nvarchar(10) foreign key references Domicilios (CodigoPostal),
+IdProvincia int not null,
+NombreLocalidad nvarchar(max) not null,
+Primary Key (CodigoPostal,IdProvincia)
+)
+
+
+Create Table Provincias(
+IdProvicia int foreign key references Localidades (IdProvincia),
+NombreProvincia nvarchar(max) not null,
+Primary Key (IdProvicia)
+)
+
+
+
+create Table Pedidos(
+NroComprobante bigint Primary key identity(1,1),
+Estado varchar(15) not null check( Estado='SOLICITADO' OR Estado='ACEPTADO' OR Estado='CANCELADO' OR Estado='DEVUELTO' OR Estado='ENVIADO' OR Estado='ENTREGADO'),
+Cliente int foreign key references usuarios (DNI),
+FechaAlta date not null,
+FechaModificacion date not null, --ultimo cambio de estado
+FormaDePago varchar(15) not null check(FormaDePago = 'EFECTIVO' OR FormaDePago='TRANSFERENCIA' OR FormaDePago= 'TARJETA'),
+Total float not null
+)
+
+create table DetallePedido(
+Id bigint primary key identity(1,1),
+NroComprobante bigint foreign key references Pedidos(NroComprobante),
+IdArticulo int foreign key references Articulos(ID),
+Cantidad int not null check (Cantidad>0),
+Monto float not null
+)
+
 
 
 
