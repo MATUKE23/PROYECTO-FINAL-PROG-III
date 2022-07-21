@@ -37,13 +37,28 @@
                             <a class="nav-link" href="Ofertas.aspx">Ofertas</a>
                         </li>
                         <li class="nav-item active mx-5">
-                            <a class="nav-link" href="Favoritos.aspx">Favoritos</a>
-                        </li>
-                        <li class="nav-item active mx-5">
                             <a class="nav-link" href="Quienes somos.aspx">Quienes somos</a>
                         </li>
 
-                        <div class="col-4">
+                        <% if (usuarioActual.TipoUsuario == Dominio.TipoUsuario.Null)
+                            {
+                        %>
+                        <li class="nav-item active mx-5">
+                            <a class="nav-link" href="Log In.aspx">Login</a>
+                        </li>
+                        <%} %>
+
+                        <%else if (usuarioActual.TipoUsuario == Dominio.TipoUsuario.Normal)
+                            { %>
+                        <li class="nav-item active mx-5">
+                            <a class="nav-link" href="Log In.aspx"><%=usuarioActual.User %></a>
+                        </li>
+                        <li class="nav-item active mx-5">
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link" OnClick="Desloguear">Logout</asp:LinkButton>
+                        </li>
+                        <%} %>
+
+                        <%--<div class="col-4">
                             <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin)
                                 {  %>
                             <li class="nav-item active mx-5">
@@ -51,28 +66,17 @@
                             </li>
 
                             <% } %>
-                        </div>
-
-
-                         <div class="col-4">
-                            <% if (Session["usuario"] == null || ((Dominio.Usuario)Session["usuario"]).TipoUsuario != Dominio.TipoUsuario.Admin)
-                                {  %>
-                        <li class="nav-item active mx-5">
-                            <a class="nav-link" href="log in.aspx">Log in</a>
-                        </li>
-
-                                 <% } %>
-                        </div>
+                        </div>--%>
 
                         <div class="col-4">
                             <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin)
                                 {  %>
 
                             <li class="nav-item active mx-5">
-                                <a class="nav-link" href="DefaultAdmin.aspx">Site1</a>
+                                <a class="nav-link" href="DefaultAdmin.aspx">Site2</a>
                             </li>
                             <% } %>
-                        </div>
+                        </div>--%>
                     </ul>
                 </div>
             </nav>
