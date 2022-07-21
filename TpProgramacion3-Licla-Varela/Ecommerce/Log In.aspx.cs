@@ -14,7 +14,7 @@ namespace Ecommerce
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+           /* Usuario usuario = new Usuario();
             usuario = (Usuario)(Session["usuarioActual"]);
             if (usuario.TipoUsuario != TipoUsuario.Null) //verifica que este logueado para acceder y evita saltear el control editando el URL
             {
@@ -22,6 +22,8 @@ namespace Ecommerce
                 Response.Redirect("Error0.aspx", false);
 
             }
+
+            */
         }
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -31,26 +33,37 @@ namespace Ecommerce
 
             try
             {
-                usuario = new Usuario(TextBoxLogIn.Text, TextBoxLogInPassword.Text, false);
-                if (negocio.Loguear(usuario))//valida el logueo
+                usuario = new Usuario(TextBoxLogIn.Text, TextBoxLogInPassword.Text, false); //asigno a objeto usuario los datos cargados en txtbox
+                if (negocio.Loguear(usuario))//valida el logueo en con la base
                 {//redirigo a la pantalla de logueo 
-                    // ACA SE LOGUEA EL USER
-                    Session.Add("usuarioActual", usuario);//agrego al usuario al sesion
+                  
+                    Session.Add("usuarioActual", usuario);//agrego al usuario al session
+                    Response.Redirect("Default.aspx",false);
+                    /*
+                    string script = @"<script type='text/javascript'>  alert('Se ha presionado el boton: 7');         </script>";
+
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+
+                    btnIniciarSesion.Attributes["onclick"] = "alert('Bienvenido Usuario'+ usuario); return false;";
+
+                    string msg = "hola";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert ('"+msg+"');",true);
+                    */
                 }
                 else
-                {//sino error y redirigo a pagina de error.
-                    Session.Add("error", "Usted a ingresado un Usuario o Password incorrecto");//SI ES INCORRECTO 
+                     {//sino error y redirigo a pagina de error.
+                    Session.Add("Error", "Usted a ingresado un Usuario o Password incorrecto");//SI ES INCORRECTO 
                     Response.Redirect("Error0.aspx", false);
                 }
 
             }
             catch (Exception ex)
             {
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error0.aspx");
+                Session.Add("Error", ex.ToString());
+                Response.Redirect("Error0.aspx", false);
             }
 
-            redireccionar();
+           // redireccionar();
         }
 
         private void redireccionar()
