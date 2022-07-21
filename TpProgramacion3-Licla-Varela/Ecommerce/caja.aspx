@@ -33,7 +33,7 @@
                                     <td>
                                         <a href="caja.aspx?contador=<%=count%>&accion=agregar" title="Agregar una cantidad" class="btn btn-dark"><i class="fa-solid fa-plus"></i></a>
                                         <a href="caja.aspx?contador=<%=count%>&accion=quitar" title="Quitar una cantidad" class="btn btn-dark"><i class="fa-solid fa-minus"></i></a>
-                                        <a href="caja.aspx?contador=<%=count%>&accion=quitarTodo" title="Quitar todo" class="btn btn-dark"><i class="fa-solid fa-xmark"></i></a>
+                                        <a href="caja.aspx?contador=<%=count%>&accion=quitarTodo" title="Quitar todo" class="btn btn-dark"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                                 <% count++;

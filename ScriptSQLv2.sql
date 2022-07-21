@@ -1,11 +1,9 @@
-Drop Database ECOMMERCE
+
  Create DataBase ECOMMERCE
-
+ go
 use ECOMMERCE
-
+go
 Create table CATEGORIAS(
- 
- (
 ID int identity(1,1) primary key,
 CODIGO VARCHAR(8) NOT NULL UNIQUE,
 DESCRIPCION VARCHAR(50) NOT NULL,
