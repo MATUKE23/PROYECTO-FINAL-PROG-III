@@ -143,7 +143,8 @@ Estado bit
 )
 
 
-
+insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('test','test','1','1')
+insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('admin','admin','1','1')
 
 
 
