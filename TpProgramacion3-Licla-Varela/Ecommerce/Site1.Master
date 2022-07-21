@@ -47,15 +47,22 @@
                             <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin)
                                 {  %>
                             <li class="nav-item active mx-5">
-                                <a class="nav-link" href="Main Admin.aspx">Main Admin</a>
+                                <a class="nav-link" href="Main Admin.aspx">Menu Admin</a>
                             </li>
 
                             <% } %>
                         </div>
 
+
+                         <div class="col-4">
+                            <% if (Session["usuario"] == null || ((Dominio.Usuario)Session["usuario"]).TipoUsuario != Dominio.TipoUsuario.Admin)
+                                {  %>
                         <li class="nav-item active mx-5">
-                            <a class="nav-link" href="log in.aspx">login</a>
+                            <a class="nav-link" href="log in.aspx">Log in</a>
                         </li>
+
+                                 <% } %>
+                        </div>
 
                         <div class="col-4">
                             <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.Admin)
