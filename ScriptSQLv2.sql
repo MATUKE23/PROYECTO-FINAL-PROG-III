@@ -135,6 +135,7 @@ Monto float not null
 
 
 
+
 Create Table Usuarios1 (
 USUARIO nVarchar(50) primary key,
 PASS nVarchar(50) not null,
@@ -142,18 +143,19 @@ TIPO int null,
 Estado bit
 )
 
-
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('test','test','1','1')
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('admin','admin','2','1')
 
+
+select * from Usuarios1
+
 create procedure AltaUsuario (
 @USUARIO nvarchar(50),
-@PASS nvarchar(50),
-@TIPO int
+@PASS nvarchar(50)
 )
 as
-insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values (@USUARIO, @PASS,@TIPO, '1')
+insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values (@USUARIO, @PASS,'1', '1')
 
 
-
+--test  altaUsuario 'prueba0', '1
 
