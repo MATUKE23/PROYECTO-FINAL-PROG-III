@@ -11,8 +11,8 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["error"] != null)
-                lblMensaje.Text = Session["error"].ToString();
+            if (Session["Error"] != null)
+                lblMensaje.Text = Session["Error"].ToString();
         }
     }
 }

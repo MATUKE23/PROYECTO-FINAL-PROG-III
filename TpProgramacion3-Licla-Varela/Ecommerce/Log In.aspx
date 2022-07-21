@@ -7,7 +7,7 @@
         <div class=" row justify-content-center">
             <div class="card">
                 <div class="card-Header text-center">
-                    <h3>Login</h3>
+                    <h3>Log in</h3>
                 </div>
                 <div class="card-body">
                     <div class="input-group form-group">

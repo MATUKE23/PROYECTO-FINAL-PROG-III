@@ -18,7 +18,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand " href="Default.aspx">El sueño de Amelie</a>
+                <a class="navbar-brand " href="DefaultAdmin.aspx">El sueño de Amelie</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,8 +44,8 @@
 
 
                         <li class="nav-item active mx-5">
-                            <a class="nav-link" href="log in.aspx">login</a>
-                        </li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link" OnClick="Desloguear">Logout</asp:LinkButton>
+                             </li>
                
                     </ul>
                 </div>
