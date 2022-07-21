@@ -146,6 +146,13 @@ Estado bit
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('test','test','1','1')
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('admin','admin','1','1')
 
+create procedure AltaUsuario (
+@USUARIO nvarchar(50),
+@PASS nvarchar(50),
+@TIPO int
+)
+as
+insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values (@USUARIO, @PASS,@TIPO, '1')
 
 
 
