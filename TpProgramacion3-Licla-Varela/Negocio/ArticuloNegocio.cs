@@ -34,7 +34,7 @@ namespace Negocio
                     aux.ID = (int)lector["ID"];
                     aux.CODIGO = (string)lector["CODIGO"];
                     aux.DESCRIPCION = (string)lector["DART"];
-                    //aux.PRECIO = (decimal)lector["PRECIO"];
+                    aux.PRECIO = decimal.Parse(lector["PRECIO"].ToString());
                     aux.TIPO = (string)lector["TIPO"];
                     aux.TIPO = (string)lector["OBS"];
                     //aux.TIPO = (bool)lector["ESTADO"];
