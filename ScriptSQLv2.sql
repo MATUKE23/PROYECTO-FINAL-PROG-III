@@ -135,7 +135,12 @@ Monto float not null
 
 
 
-
+Create Table Usuarios1 (
+USUARIO nVarchar(50) primary key,
+PASS nVarchar(50) not null,
+TIPO int null, 
+Estado bit
+)
 
 
 
