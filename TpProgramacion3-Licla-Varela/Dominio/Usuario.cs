@@ -17,7 +17,7 @@ namespace Dominio
     public class Usuario
 
     {
-        public int DNI { get; set; }
+       // public int DNI { get; set; }
         public string User { get; set; }
 
         public string Pass { get; set; }

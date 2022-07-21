@@ -43,9 +43,11 @@ namespace Ecommerce
                     string script = @"<script type='text/javascript'>  alert('Se ha presionado el boton: 7');         </script>";
 
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
+                   
+                    usuario = (Usuario)(Session["usuarioActual"]);
                     btnIniciarSesion.Attributes["onclick"] = "alert('Bienvenido Usuario'+ usuario); return false;";
 
+                    
                     string msg = "hola";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert ('"+msg+"');",true);
                     */
