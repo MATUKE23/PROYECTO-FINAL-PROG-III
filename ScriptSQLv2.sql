@@ -110,3 +110,36 @@ FechaNacimiento date not null,
 Estado bit,
 Usuario nvarchar(50) foreign key references usuarios1(usuario)
 )
+
+
+
+create procedure AltaPedido 
+(
+@cliente nvarchar(50),--DNI
+@FormaDePago varchar(15),
+@Total float
+)
+as
+
+insert into Pedidos values ('SOLICITADO', @cliente, GETDATE(),GETDATE(),
+@FormaDePago, @Total)
+
+
+
+EXEC AltaPedido 'TUKE', 'EFECTIVO','100'
+
+
+
+--SELECT * FROM Pedidos
+
+INSERT INTO CLIENTES VALUES('MATY', 'VARE', '28800000','11111','11',GETDATE(),'1','TUKE')
+
+
+
+create procedure ListarPedidosXUsuario 
+(
+@Usuario nvarchar(50)
+)
+as
+select p.NroComprobante, p.Estado, p.FechaAlta,
+p.FechaModificacion, p.FormaDePago, p.Total from Pedidos as p where Cliente = @Usuario
