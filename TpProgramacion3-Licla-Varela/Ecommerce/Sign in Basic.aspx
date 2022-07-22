@@ -26,7 +26,7 @@
                     <asp:Button ID="ButtonRegistrarse" runat="server" Text="Registrarse" OnClick="ButtonRegistrarse_Click" />
 
 
-        
+         </div>
             </div>
         </div>
     </div>

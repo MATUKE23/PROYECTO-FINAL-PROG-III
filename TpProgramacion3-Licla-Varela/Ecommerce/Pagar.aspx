@@ -23,7 +23,7 @@
 
             </div>
             <div>
-                <asp:Button ID="BtnEnviarPedido" Text="Enviar Pedido" CssClass="btn btn-success" runat="server" OnClick="EnviarPedido"/>
+                <asp:Button ID="BtnEnviarPedido" Text="Enviar Pedido" CssClass="btn btn-success" runat="server" OnClick="EnviarPedido_click"/>
             </div>
         </div>
     </div>

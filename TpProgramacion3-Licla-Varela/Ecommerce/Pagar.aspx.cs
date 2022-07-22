@@ -30,19 +30,38 @@ namespace Ecommerce
             {
                 total += (aux.CANTIDAD * aux.PRECIO);
             }
+
+            
+            
         }
 
-        protected void EnviarPedido(object sender, EventArgs e)
+        protected void EnviarPedido_click(object sender, EventArgs e)
         {
+            DetallePedidoNegocio negocio = new DetallePedidoNegocio();
+
             Usuario auxUsuario = new Usuario();
             auxUsuario = (Usuario)Session["usuarioActual"];
 
             Pedido auxPedido = new Pedido();
-            DetallePedido auxDetalle = new DetallePedido();
+            DetallePedido auxDetallePedido = new DetallePedido();
 
-            auxPedido.usuario = auxUsuario.User;
+            PedidoNegocio negocio1 = new PedidoNegocio();
+
+            auxPedido.cliente = auxUsuario.User; //cargo el cliente
             auxPedido.formaPago = DbxFormaPago.Text;
             auxPedido.Total = total;
+                                      
+            auxDetallePedido.idArticulo = carrito[0].ID;
+            auxDetallePedido.cantidad = carrito[0].CANTIDAD;
+            auxDetallePedido.monto = carrito[0].CANTIDAD * carrito[0].PRECIO;
+
+
+
+            negocio1.AltaPedidoyDetallePedidoSP(auxPedido);
+
+            Response.Redirect("Default.aspx");
+
+
 
         }
     }

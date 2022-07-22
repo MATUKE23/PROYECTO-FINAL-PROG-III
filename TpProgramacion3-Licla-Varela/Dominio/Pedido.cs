@@ -10,7 +10,7 @@ namespace Dominio
     {
         public int nroComprobante { get; set; }
         public string estado { get; set; }
-        public string usuario { get; set; }
+        public string cliente { get; set; }
         public DateTime fechaAlta { get; set; }
         public DateTime fechaModificacion { get; set; }
         public string formaPago { get; set; }

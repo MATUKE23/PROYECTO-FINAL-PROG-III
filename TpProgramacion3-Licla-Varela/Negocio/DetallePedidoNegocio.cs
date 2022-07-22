@@ -7,7 +7,7 @@ using Dominio;
 
 namespace Negocio
 {
-    class DetallePedidoNegocio
+    public class DetallePedidoNegocio
     {
         public List<DetallePedido> Listar()
         {
@@ -20,5 +20,8 @@ namespace Negocio
             List<DetallePedido> Lista = new List<DetallePedido>();
             return Lista;
         }
+
+   
+
     }
 }
