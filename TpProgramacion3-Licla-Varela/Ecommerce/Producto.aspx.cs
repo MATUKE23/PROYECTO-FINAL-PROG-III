@@ -16,7 +16,7 @@ namespace Ecommerce
         {
             int id_articulo = int.Parse(Request.QueryString["id_producto"].ToString());
             List<Articulo> lista = (List<Articulo>)Session["ListaArticulos"];
-            foreach(Articulo art in lista)
+            foreach (Articulo art in lista)
             {
                 if (art.ID == id_articulo)
                 {
@@ -27,13 +27,24 @@ namespace Ecommerce
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            List <Articulo> carrito = (List<Articulo>)Session["carritoCompra"];
+            agregar();
+        }
+
+        protected void btnPagar_Click(object sender, EventArgs e)
+        {
+            agregar();
+            Response.Redirect("caja.aspx");
+        }
+
+        protected void agregar()
+        {
+            List<Articulo> carrito = (List<Articulo>)Session["carritoCompra"];
             Articulo aux = new Articulo();
             aux = articulo;
             bool nuevo = true;
-            foreach(Articulo art in carrito)
+            foreach (Articulo art in carrito)
             {
-                if(art.CODIGO == articulo.CODIGO)
+                if (art.CODIGO == articulo.CODIGO)
                 {
                     art.CANTIDAD += int.Parse(txtCantidad.Text);
                     nuevo = false;
@@ -45,8 +56,10 @@ namespace Ecommerce
                 aux.CANTIDAD = int.Parse(txtCantidad.Text);
                 carrito.Add(aux);
             }
-            
+
             Session.Add("carritoCompra", carrito);
         }
+
+
     }
 }

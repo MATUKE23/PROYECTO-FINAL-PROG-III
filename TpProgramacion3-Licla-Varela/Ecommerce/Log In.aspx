@@ -21,7 +21,7 @@
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
                      
-                        <asp:TextBox ID="TextBoxLogInPassword" placeholder="*****" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxLogInPassword" placeholder="*****"  runat="server" CssClass="form-control"></asp:TextBox>
                     </div> 
                     <div class="form-group row justify-content-center">
                         <asp:Button ID="btnIniciarSesion" CssClass="btn btn-primary" runat="server" Text="Iniciar Sesión" OnClick="btnIniciarSesion_Click" />

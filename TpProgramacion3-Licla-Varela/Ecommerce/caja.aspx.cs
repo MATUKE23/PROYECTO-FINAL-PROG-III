@@ -12,10 +12,18 @@ namespace Ecommerce
     public partial class caja : System.Web.UI.Page
     {
         public List<Articulo> carrito { get; set; }
+        public decimal total { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             carrito = (List<Articulo>)Session["carritoCompra"];
             EjecutarAccion();
+
+            total = 0;
+            foreach (Articulo aux in carrito)
+            {
+                total += (aux.CANTIDAD * aux.PRECIO);
+            }
+
         }
 
         private void EjecutarAccion()
@@ -58,6 +66,11 @@ namespace Ecommerce
             carrito.Clear();
             Session.Add("carritoCompra", carrito);
             Response.Redirect("Caja.aspx");
+        }
+
+        protected void Pagar(object sender, EventArgs e)
+        {
+            Response.Redirect("Pagar.aspx");
         }
 
     }

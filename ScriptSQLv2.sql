@@ -57,7 +57,15 @@ select * from IMAGENES
 SELECT a.Id as id, A.CODIGO,  a.Descripcion dart,  A.PRECIO, A.TIPO, a.OBS, A.ESTADO, a.ID_CATEGORIA IdCategoria from ARTICULOS a
 
 
-
+Create Table Usuarios (
+Nombres nVarchar(max) not null,
+Apellidos nVarchar(max) not null,
+DNI int primary key ,
+Telefono1 nvarchar(22) not null,
+Telefono2 nvarchar(22) null,
+FechaNacimiento date not null,
+Estado bit
+)
 
 USE ECOMMERCE
 
@@ -77,15 +85,7 @@ ADD PASS NVARCHAR(15) NOT NULL
 
 use ECOMMERCE
 
-Create Table Usuarios (
-Nombres nVarchar(max) not null,
-Apellidos nVarchar(max) not null,
-DNI int primary key ,
-Telefono1 nvarchar(22) not null,
-Telefono2 nvarchar(22) null,
-FechaNacimiento date not null,
-Estado bit
-)
+
 
 Create Table Domicilios(
 DNI int foreign key references usuarios (DNI),
@@ -148,7 +148,7 @@ insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('admin','admin','2','1'
 
 
 select * from Usuarios1
-
+go
 create procedure AltaUsuario (
 @USUARIO nvarchar(50),
 @PASS nvarchar(50)

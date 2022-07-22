@@ -11,34 +11,43 @@ namespace Ecommerce
 {
 
 
-    public partial class Log_In
+    public partial class Pagar
     {
 
         /// <summary>
-        /// Control TextBoxLogIn.
+        /// Control dgvArticulos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLogIn;
+        protected global::System.Web.UI.WebControls.GridView dgvArticulos;
 
         /// <summary>
-        /// Control TextBoxLogInPassword.
+        /// Control DbxFormaPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLogInPassword;
+        protected global::System.Web.UI.WebControls.DropDownList DbxFormaPago;
 
         /// <summary>
-        /// Control btnIniciarSesion.
+        /// Control checkbxEnvio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIniciarSesion;
+        protected global::System.Web.UI.WebControls.CheckBox checkbxEnvio;
+
+        /// <summary>
+        /// Control BtnEnviarPedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnEnviarPedido;
     }
 }

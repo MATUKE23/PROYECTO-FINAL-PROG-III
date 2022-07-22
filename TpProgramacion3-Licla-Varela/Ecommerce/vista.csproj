@@ -141,6 +141,8 @@
     <Content Include="Modificar Productos.aspx" />
     <Content Include="Modificar Quienes Somos.aspx" />
     <Content Include="Ofertas.aspx" />
+    <Content Include="Pagar.aspx" />
+    <Content Include="PedidosCliente.aspx" />
     <Content Include="Producto.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Quienes somos.aspx" />
@@ -297,6 +299,20 @@
     </Compile>
     <Compile Include="Ofertas.aspx.designer.cs">
       <DependentUpon>Ofertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagar.aspx.cs">
+      <DependentUpon>Pagar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagar.aspx.designer.cs">
+      <DependentUpon>Pagar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosCliente.aspx.cs">
+      <DependentUpon>PedidosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidosCliente.aspx.designer.cs">
+      <DependentUpon>PedidosCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Producto.aspx.cs">
       <DependentUpon>Producto.aspx</DependentUpon>

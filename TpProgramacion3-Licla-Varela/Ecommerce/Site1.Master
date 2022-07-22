@@ -11,9 +11,9 @@
     <script src="https://kit.fontawesome.com/9a4a93b051.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilos.css?v=<%=DateTime.Now%>" type="text/css">
 
-         <title>El sueño de Amelie</title>
+    <title>El sueño de Amelie</title>
 
-        <asp:ContentPlaceHolder ID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -30,41 +30,44 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <%/* UL =Unordened List*/ %>
-                        <li class="nav-item active mx-5"><%/*li= link*/ %>
+                        <li class="nav-item active mx-4"><%/*li= link*/ %>
                             <a class="nav-link" href="Productos.aspx">Productos</a>
                         </li>
-                        <li class="nav-item active mx-5">
-                            <a class="nav-link" href="Ofertas.aspx">Ofertas</a>
-                        </li>
-                        <li class="nav-item active mx-5">
+
+                        <li class="nav-item active mx-4">
                             <a class="nav-link" href="Quienes somos.aspx">Quienes somos</a>
                         </li>
 
                         <% if (usuarioActual.TipoUsuario == Dominio.TipoUsuario.Null)
                             {
                         %>
-                            <li class="nav-item active mx-5">
-                                <a class="nav-link" href="Log In.aspx">Login</a>
-                            </li>
+                        <li class="nav-item active mx-4">
+                            <a class="nav-link" href="Log In.aspx">Login</a>
+                        </li>
                         <%} %>
 
                         <%else if (usuarioActual.TipoUsuario == Dominio.TipoUsuario.Normal)
                             { %>
-                            <li class="nav-item active mx-5">
-                            <a class="nav-link" >Mi cuenta <%=usuarioActual.User %></a>
-                             </li>
+                        <li class="nav-item active mx-4">
+                            <a class="nav-link">Mi cuenta <%=usuarioActual.User %></a>
+                        </li>
 
-                            <li class="nav-item active mx-5">
+                        <li class="nav-item active mx-4">
                             <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link" OnClick="Desloguear">Logout</asp:LinkButton>
-                             </li>
-                        <%} %>
+                        </li>
 
-                         <li class="nav-item active mx-5">
-                           <a class="nav-link" href="Sign In Basic.aspx">Registrarte</a>
-                             </li>
-                        
-                    
-                    
+                        <li class="nav-item active mx-4">
+                            <a class="nav-link" href="PedidosCliente.aspx">Mis Pedidos <i class="fa-solid fa-sheet-plastic"></i></a>
+                        </li>
+
+                        <%} %>
+                        <%if (usuarioActual.TipoUsuario == Dominio.TipoUsuario.Null)
+                            {%>
+                        <li class="nav-item active mx-4">
+                            <a class="nav-link" href="Sign In Basic.aspx">Registrarte</a>
+                        </li>
+
+                        <%} %>
                     </ul>
                 </div>
             </nav>
