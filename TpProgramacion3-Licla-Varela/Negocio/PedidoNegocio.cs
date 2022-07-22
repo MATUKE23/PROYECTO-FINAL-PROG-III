@@ -9,15 +9,15 @@ namespace Negocio
 {
     class PedidoNegocio
     {
-        public List<DetallePedido> Listar()
+        public List<Pedido> Listar()
         {
-            List<DetallePedido> Lista = new List<DetallePedido>();
+            List<Pedido> Lista = new List<Pedido>();
             return Lista;
         }
 
-        public List<DetallePedido> ListarPorCliente(string usuario)
+        public List<Pedido> ListarPorCliente(string usuario)
         {
-            List<DetallePedido> Lista = new List<DetallePedido>();
+            List<Pedido> Lista = new List<Pedido>();
             return Lista;
         }
     }

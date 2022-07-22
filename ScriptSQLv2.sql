@@ -1,5 +1,4 @@
-
- Create DataBase ECOMMERCE
+Create DataBase ECOMMERCE
  go
 use ECOMMERCE
 go
@@ -56,75 +55,28 @@ select * from IMAGENES
 
 SELECT a.Id as id, A.CODIGO,  a.Descripcion dart,  A.PRECIO, A.TIPO, a.OBS, A.ESTADO, a.ID_CATEGORIA IdCategoria from ARTICULOS a
 
-
-Create Table Usuarios (
-Nombres nVarchar(max) not null,
-Apellidos nVarchar(max) not null,
-DNI int primary key ,
-Telefono1 nvarchar(22) not null,
-Telefono2 nvarchar(22) null,
-FechaNacimiento date not null,
-Estado bit
-)
-
-USE ECOMMERCE
-
-ALTER TABLE USUARIOS
-ADD TIPO INT CHECK (TIPO >=0 AND TIPO <=9)
-
-
-SELECT * FROM USUARIOS
-
---AGREGAR COLUMNA USER 
-
-ALTER TABLE USUARIOS
-ADD USUARIO NVARCHAR(15) NOT NULL 
-
-ALTER TABLE USUARIOS
-ADD PASS NVARCHAR(15) NOT NULL 
+go
 
 use ECOMMERCE
+GO
 
-
-
-Create Table Domicilios(
-DNI int foreign key references usuarios (DNI),
-Calle nvarchar(max) not null,
-NumeroDeCalle int not null,
-EntreCalles nvarchar(max) null,
-Edificio nvarchar(max) null,
-Departamento nvarchar(max) null,
-CodigoPostal Nvarchar(10) not null unique,
-InfoAdicional text null
-Primary Key (DNI, CodigoPostal)
+Create Table Usuarios1 (
+USUARIO nVarchar(50) primary key,
+PASS nVarchar(50) not null,
+TIPO int null, 
+Estado bit
 )
-
-Create Table Localidades (
-CodigoPostal Nvarchar(10) foreign key references Domicilios (CodigoPostal),
-IdProvincia int not null,
-NombreLocalidad nvarchar(max) not null,
-Primary Key (CodigoPostal,IdProvincia)
-)
-
-
-Create Table Provincias(
-IdProvicia int foreign key references Localidades (IdProvincia),
-NombreProvincia nvarchar(max) not null,
-Primary Key (IdProvicia)
-)
-
-
-
+GO
 create Table Pedidos(
 NroComprobante bigint Primary key identity(1,1),
 Estado varchar(15) not null check( Estado='SOLICITADO' OR Estado='ACEPTADO' OR Estado='CANCELADO' OR Estado='DEVUELTO' OR Estado='ENVIADO' OR Estado='ENTREGADO'),
-Cliente int foreign key references usuarios (DNI),
+Cliente nvarchar(50) foreign key references Usuarios1 (USUARIO),
 FechaAlta date not null,
 FechaModificacion date not null, --ultimo cambio de estado
 FormaDePago varchar(15) not null check(FormaDePago = 'EFECTIVO' OR FormaDePago='TRANSFERENCIA' OR FormaDePago= 'TARJETA'),
 Total float not null
 )
-
+go
 create table DetallePedido(
 Id bigint primary key identity(1,1),
 NroComprobante bigint foreign key references Pedidos(NroComprobante),
@@ -133,21 +85,10 @@ Cantidad int not null check (Cantidad>0),
 Monto float not null
 )
 
-
-
-
-Create Table Usuarios1 (
-USUARIO nVarchar(50) primary key,
-PASS nVarchar(50) not null,
-TIPO int null, 
-Estado bit
-)
-
+go
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('test','test','1','1')
 insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values ('admin','admin','2','1')
 
-
-select * from Usuarios1
 go
 create procedure AltaUsuario (
 @USUARIO nvarchar(50),
@@ -158,7 +99,7 @@ insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values (@USUARIO, @PASS,'1', '1
 
 
 --test  altaUsuario 'prueba0', '1
-
+go
  Create Table Clientes (
 Nombres nVarchar(max) not null,
 Apellidos nVarchar(max) not null,
@@ -169,4 +110,3 @@ FechaNacimiento date not null,
 Estado bit,
 Usuario nvarchar(50) foreign key references usuarios1(usuario)
 )
-
