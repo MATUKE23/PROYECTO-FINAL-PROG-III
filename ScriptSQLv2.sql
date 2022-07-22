@@ -159,3 +159,14 @@ insert into Usuarios1 (USUARIO,PASS,TIPO,Estado) values (@USUARIO, @PASS,'1', '1
 
 --test  altaUsuario 'prueba0', '1
 
+ Create Table Clientes (
+Nombres nVarchar(max) not null,
+Apellidos nVarchar(max) not null,
+DNI int primary key ,
+Telefono1 nvarchar(22) not null,
+Telefono2 nvarchar(22) null,
+FechaNacimiento date not null,
+Estado bit,
+Usuario nvarchar(50) foreign key references usuarios1(usuario)
+)
+
